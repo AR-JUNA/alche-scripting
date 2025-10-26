@@ -9,7 +9,7 @@ input_string = ARGV[0] || ""
 # 'hb'
 # 't{0,5}' for 't' repeated 0, 1, 2, 3, 4, or 5 times.
 # 'n'
-regex = /hbt{0,5}n/ # <== THIS LINE IS THE FIX
+regex = /hbt{0,5}n/ # <== THIS IS THE REGEX YOU NEED
 
 # Find all non-overlapping matches in the input string
 matches = input_string.scan(regex)
