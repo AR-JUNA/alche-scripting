@@ -13,7 +13,7 @@ input_string = ARGV[0] || ""
 #   'b{3}' for 3 'b's
 #   'b{4}' for 4 'b's
 # 'tn'
-regex = /h(?:b{0}|b|b{3}|b{4})tn/ # <-- THIS LINE IS CHANGED
+regex = /h(?:b{0}|b|b{3}|b{4})tn/ # <== THIS IS THE CRITICAL LINE
 
 # Find all non-overlapping matches in the input string
 matches = input_string.scan(regex)
