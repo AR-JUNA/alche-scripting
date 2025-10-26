@@ -1,11 +1,14 @@
-#!/usr/bin/ruby
+#!/usr/bin/env ruby
+# File: 6-phone_number.rb
 
-input = ARGV[0]
-regex = /\A\s*(\d{3}[-.\s]?\d{3}[-.\s]?\d{4}|\d{10})\s*\z/
-match = regex.match(input)
+# Requirement: Match a 10 digit phone number, optionally separated by space or hyphen.
+# Pattern: ^(3 digits)(optional separator)(3 digits)(optional separator)(4 digits)$
+regex = /^\d{3}[- ]?\d{3}[- ]?\d{4}$/
 
-if match
-  puts match[1]  # Print the captured group (the 10-digit phone number)
-else
-  puts "No match"
+input_string = ARGV[0]
+
+if input_string
+  # Use scan to return the full matched string
+  matches = input_string.scan(regex)
+  puts matches.join
 end
